@@ -30,7 +30,7 @@ module.exports = events.extend({
   },
   write : function(chunk){
     if(this._ended) {
-      throw new TypeError()
+      return
     }
     if(chunk == null) {
       this.emit("end")
